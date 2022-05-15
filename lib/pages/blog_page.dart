@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:website/pages/Blog%20Page/desktop_blog_page.dart';
+import 'package:website/pages/Blog%20Page/laptop_blog_page.dart';
+import 'package:website/pages/Blog%20Page/mobile_blog_page.dart';
 
+import '../responsive/responsive_layout.dart';
 import '../widgets/app_bar.dart';
 import '../widgets/side_bar.dart';
 
@@ -16,12 +20,13 @@ class _BlogPageState extends State<BlogPage> {
     return Scaffold(
       drawer: SideBar(),
       endDrawer: SideBar(),
-      body: Column(
-        children: [
-          MyAppBar(
-            
-          ),
-        ],
+      extendBodyBehindAppBar: true,
+      body: ResponsiveLayout(
+        mobilBody: MobileBlogPage(),
+        laptopBody: LaptopBlogPage(),
+        desktopBody: DesktopBlogPage(),
+        mobilMaxWidth: 800,
+        laptopMaxWidth: 1200,
       ),
     );
   }

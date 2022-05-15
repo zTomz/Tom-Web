@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/pages/blog_page.dart';
 import 'package:website/pages/home_page.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: HomePage(),
+      home: BlogPage(),
     );
   }
 }

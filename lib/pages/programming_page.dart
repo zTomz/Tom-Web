@@ -17,15 +17,16 @@ class _ProgrammingPageState extends State<ProgrammingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: SideBar(),
-        endDrawer: SideBar(),
-        extendBodyBehindAppBar: true,
-        body: ResponsiveLayout(
-          mobilBody: MobileProgrammingPage(),
-          laptopBody: LaptopProgrammingPage(),
-          desktopBody: DesktopProgrammingPage(),
-          mobilMaxWidth: 800,
-          laptopMaxWidth: 1200,
-        ));
+      drawer: SideBar(),
+      endDrawer: SideBar(),
+      extendBodyBehindAppBar: true,
+      body: ResponsiveLayout(
+        mobilBody: MobileProgrammingPage(),
+        laptopBody: LaptopProgrammingPage(),
+        desktopBody: DesktopProgrammingPage(),
+        mobilMaxWidth: 800,
+        laptopMaxWidth: 1200,
+      ),
+    );
   }
 }

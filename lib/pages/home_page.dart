@@ -17,15 +17,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        extendBodyBehindAppBar: true,
-        drawer: SideBar(),
-        endDrawer: SideBar(),
-        body: ResponsiveLayout(
-          mobilBody: MobilHomePage(),
-          laptopBody: LaptopHomePage(),
-          desktopBody: DesktopHomePage(),
-          mobilMaxWidth: 600,
-          laptopMaxWidth: 1200,
-        ));
+      extendBodyBehindAppBar: true,
+      drawer: SideBar(),
+      endDrawer: SideBar(),
+      body: ResponsiveLayout(
+        mobilBody: MobilHomePage(),
+        laptopBody: LaptopHomePage(),
+        desktopBody: DesktopHomePage(),
+        mobilMaxWidth: 600,
+        laptopMaxWidth: 1200,
+      ),
+    );
   }
 }
