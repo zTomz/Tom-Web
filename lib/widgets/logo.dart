@@ -21,6 +21,7 @@ class Logo extends StatelessWidget {
         ),
       ),
       child: Container(
+        // Control size
         width: this.size * 0.9,
         height: this.size * 0.8,
         decoration: BoxDecoration(
