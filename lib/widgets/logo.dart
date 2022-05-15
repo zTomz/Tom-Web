@@ -42,6 +42,7 @@ class Logo extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.all(this.size / 20),
             child: SvgPicture.asset(
+              // Logo location
               "assets/ico/logo.svg",
               color: this.logoColor == null
                   ? Theme.of(context).accentColor
