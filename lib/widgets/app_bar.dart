@@ -19,7 +19,6 @@ class _MyAppBarState extends State<MyAppBar> {
     return Container(
       height: appBarHeight,
       decoration: BoxDecoration(
-        
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -27,7 +26,6 @@ class _MyAppBarState extends State<MyAppBar> {
             Theme.of(context).primaryColor.withOpacity(0.75),
             Theme.of(context).accentColor.withOpacity(0.75),
           ],
-          
         ),
         boxShadow: const [
           BoxShadow(
@@ -37,10 +35,8 @@ class _MyAppBarState extends State<MyAppBar> {
           ),
         ],
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.elliptical(
-              MediaQuery.of(context).size.width / (1 / 3), appBarHeight - 10),
-          bottomRight: Radius.elliptical(
-              MediaQuery.of(context).size.width / (1 / 3), appBarHeight - 10),
+          bottomLeft: Radius.circular(25),
+          bottomRight: Radius.circular(25),
         ),
       ),
 

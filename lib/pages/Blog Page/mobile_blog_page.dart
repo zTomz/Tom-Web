@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:website/libary.dart';
 import 'package:website/widgets/blog_article.dart';
 
+import '../../widgets/ListRow.dart';
 import '../../widgets/app_bar.dart';
 
 class MobileBlogPage extends StatefulWidget {
@@ -16,9 +18,22 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
     return Column(
       children: [
         MyAppBar(),
-        BlogArticle(
-          image: "assets/img/projectImg/WebsiteHomepage.png",
-          text: "This is a blog article",
+        Expanded(
+          child: Scrollbar(
+            child: ListView(
+              children: [
+                SizedBox(height: 40),
+                Column(
+                  children: [
+                    BlogArticle(
+                      image: blogArticles[0][0],
+                      text: blogArticles[0][1],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ],
     );

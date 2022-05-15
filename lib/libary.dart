@@ -17,3 +17,13 @@ List<List> skills = [
 List<List> projects = [
   ["assets/img/projectImg/WebsiteHomepage.png", "This is my first website!"],
 ];
+
+List<List> blogArticles = [
+  ["assets/img/projectImg/WebsiteHomepage.png", "This is my first website!"],
+];
+
+int age = 13;
+String aboutText =
+    "Hello, I am Tom and 13 years old. I also do sports, such as bodyweight training, handball and endurance sports. In my free time I like programming and that's how this project came about :).";
+String hobbies =
+    "-> Handball\n-> endurance sports\n-> bodyweight training\n-> programming";

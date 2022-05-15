@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:website/pages/About%20Page/desktop_about_page.dart';
+import 'package:website/pages/About%20Page/laptop_about_page.dart';
+import 'package:website/pages/About%20Page/mobile_about_page.dart';
 
+import '../responsive/responsive_layout.dart';
 import '../widgets/app_bar.dart';
 import '../widgets/side_bar.dart';
 
@@ -16,10 +20,13 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       drawer: SideBar(),
       endDrawer: SideBar(),
-      body: Column(
-        children: [
-          MyAppBar(),
-        ],
+      extendBodyBehindAppBar: true,
+      body: ResponsiveLayout(
+        mobilBody: MobileAboutPage(),
+        laptopBody: LaptopAboutPage(),
+        desktopBody: DesktopAboutPage(),
+        mobilMaxWidth: 800,
+        laptopMaxWidth: 1200,
       ),
     );
   }

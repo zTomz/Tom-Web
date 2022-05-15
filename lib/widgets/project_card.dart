@@ -30,7 +30,6 @@ class _ProjectCardState extends State<ProjectCard> {
         child: Column(
           children: [
             Container(
-              height: 175,
               child: Image.asset(
                 this.widget.image,
               ),

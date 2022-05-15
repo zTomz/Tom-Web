@@ -32,14 +32,19 @@ class _BlogArticleState extends State<BlogArticle> {
           borderRadius: BorderRadius.circular(25),
           child: Column(
             children: [
-              Image.asset(this.widget.image),
               Container(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                this.widget.text,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w200),
+                child: Image.asset(this.widget.image),
               ),
-            ),
+              Container(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  this.widget.text,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w200,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

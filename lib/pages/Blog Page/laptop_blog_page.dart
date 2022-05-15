@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:website/libary.dart';
 
+import '../../widgets/ListRow.dart';
 import '../../widgets/app_bar.dart';
+import '../../widgets/blog_article.dart';
 
 class LaptopBlogPage extends StatefulWidget {
   LaptopBlogPage({Key? key}) : super(key: key);
@@ -13,7 +16,26 @@ class _LaptopBlogPageState extends State<LaptopBlogPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [MyAppBar(),],
+      children: [
+        MyAppBar(),
+        Expanded(
+          child: Scrollbar(
+            child: ListView(
+              children: [
+                ListRow(
+                  children: [
+                    SizedBox(height: 40),
+                    BlogArticle(
+                      image: blogArticles[0][0],
+                      text: blogArticles[0][1],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

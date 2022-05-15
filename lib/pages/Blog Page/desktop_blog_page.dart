@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:website/libary.dart';
+import 'package:website/widgets/ListRow.dart';
 import 'package:website/widgets/app_bar.dart';
 import 'package:website/widgets/blog_article.dart';
 
@@ -15,9 +17,20 @@ class _DesktopBlogPageState extends State<DesktopBlogPage> {
     return Column(
       children: [
         MyAppBar(),
-        BlogArticle(
-          image: "assets/img/projectImg/WebsiteHomepage.png",
-          text: "This is a blog article",
+        Expanded(
+          child: Scrollbar(
+            child: ListView(
+              children: [
+                SizedBox(height: 40),
+                ListRow(
+                  children: [
+                    BlogArticle(
+                        image: blogArticles[0][0], text: blogArticles[0][1]),
+                  ],
+                )
+              ],
+            ),
+          ),
         ),
       ],
     );
