@@ -15,57 +15,66 @@ class SideBar extends StatefulWidget {
 }
 
 class _SideBarState extends State<SideBar> {
+  
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: Material(
-        color: Theme.of(context).accentColor,
-        child: ListView(
-          children: <Widget>[
-            SizedBox(
-              height: 50,
+    final padding = MediaQuery.of(context).size.width * 0.02;
+    return Padding(
+      padding: EdgeInsets.only(top: padding, left: padding, bottom: padding),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(25),
+        child: Drawer(
+          child: Material(
+            color: Theme.of(context).accentColor,
+            child: ListView(
+              children: <Widget>[
+                SizedBox(
+                  height: 50,
+                ),
+
+                // ! Menu items for side bar
+
+                menuItem(
+                  text: "Home",
+                  icon: 'assets/ico/home.svg',
+                  function: () => selectedItem(context, 0),
+                ),
+                menuItem(
+                  text: "Programming",
+                  icon: 'assets/ico/browser.svg',
+                  function: () => selectedItem(context, 1),
+                ),
+                menuItem(
+                  text: "Blog",
+                  icon: 'assets/ico/book.svg',
+                  function: () => selectedItem(context, 2),
+                ),
+
+                // ? Divider
+
+                ListDivider(),
+
+                menuItem(
+                  text: "About",
+                  icon: 'assets/ico/info.svg',
+                  function: () => selectedItem(context, 3),
+                ),
+                menuItem(
+                  text: "Contact",
+                  icon: 'assets/ico/message.svg',
+                  function: () => selectedItem(context, 4),
+                ),
+
+                ListDivider(),
+
+                menuItem(
+                  text: "Settings",
+                  icon: 'assets/ico/settings.svg',
+                  function: () => selectedItem(context, 5),
+                ),
+              ],
             ),
-
-            // ! Menu items for side bar
-
-            menuItem(
-              text: "Home",
-              icon: 'assets/ico/home.svg',
-              function: () => selectedItem(context, 0),
-            ),menuItem(
-              text: "Programming",
-              icon: 'assets/ico/browser.svg',
-              function: () => selectedItem(context, 1),
-            ),
-            menuItem(
-              text: "Blog",
-              icon: 'assets/ico/book.svg',
-              function: () => selectedItem(context, 2),
-            ),
-
-            // ? Divider
-
-            ListDivider(),
-
-            menuItem(
-              text: "About",
-              icon: 'assets/ico/info.svg',
-              function: () => selectedItem(context, 3),
-            ),
-            menuItem(
-              text: "Contact",
-              icon: 'assets/ico/message.svg',
-              function: () => selectedItem(context, 4),
-            ),
-
-            ListDivider(),
-
-            menuItem(
-              text: "Settings",
-              icon: 'assets/ico/settings.svg',
-              function: () => selectedItem(context, 5),
-            ),
-          ],
+          ),
         ),
       ),
     );
