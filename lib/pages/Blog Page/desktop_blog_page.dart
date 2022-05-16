@@ -3,6 +3,7 @@ import 'package:website/libary.dart';
 import 'package:website/widgets/ListRow.dart';
 import 'package:website/widgets/app_bar.dart';
 import 'package:website/widgets/blog_article.dart';
+import 'package:website/widgets/under_title.dart';
 
 class DesktopBlogPage extends StatefulWidget {
   DesktopBlogPage({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class _DesktopBlogPageState extends State<DesktopBlogPage> {
           child: Scrollbar(
             child: ListView(
               children: [
-                SizedBox(height: 40),
+                underTitle(title: "Blog"),
                 ListRow(
                   children: [
                     BlogArticle(

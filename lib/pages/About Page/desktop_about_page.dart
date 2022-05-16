@@ -4,6 +4,7 @@ import 'package:website/widgets/about_side_bar.dart';
 import 'package:website/widgets/app_bar.dart';
 
 import 'package:website/widgets/social_media_bar.dart';
+import 'package:website/widgets/under_title.dart';
 
 class DesktopAboutPage extends StatefulWidget {
   DesktopAboutPage({Key? key}) : super(key: key);
@@ -23,7 +24,6 @@ class _DesktopAboutPageState extends State<DesktopAboutPage> {
           child: Scrollbar(
             child: ListView(
               children: [
-                SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,

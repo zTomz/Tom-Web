@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:website/libary.dart';
 import 'package:website/widgets/ListRow.dart';
 import 'package:website/widgets/skill_card.dart';
+import 'package:website/widgets/under_title.dart';
 
 import '../../widgets/app_bar.dart';
 import '../../widgets/project_card.dart';
@@ -23,7 +24,7 @@ class _LaptopProgrammingPageState extends State<LaptopProgrammingPage> {
           child: Scrollbar(
             child: ListView(
               children: [
-                SizedBox(height: 40),
+                underTitle(title: "Skills"),
                 ListRow(
                   children: [
                     SkillCard(title: skills[0][0], procent: skills[0][1]),
@@ -53,6 +54,7 @@ class _LaptopProgrammingPageState extends State<LaptopProgrammingPage> {
                     SkillCard(title: skills[8][0], procent: skills[8][1]),
                   ],
                 ),
+                underTitle(title: "Projects"),
                 ListRow(
                   children: [
                     ProjectCard(

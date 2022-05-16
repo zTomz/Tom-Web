@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         highlightColor: const Color(0xff06D6A0),
         backgroundColor: const Color(0xffD4DCFF),
         scaffoldBackgroundColor: const Color(0xffD4DCFF),
-        fontFamily: "Horizon",
+        fontFamily: "Roboto",
         textTheme: const TextTheme(
           headline1: TextStyle(
             fontSize: 30,

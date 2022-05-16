@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:website/libary.dart';
 import 'package:website/widgets/blog_article.dart';
+import 'package:website/widgets/under_title.dart';
 
 import '../../widgets/ListRow.dart';
 import '../../widgets/app_bar.dart';
@@ -22,7 +23,7 @@ class _MobileBlogPageState extends State<MobileBlogPage> {
           child: Scrollbar(
             child: ListView(
               children: [
-                SizedBox(height: 40),
+                underTitle(title: "Blog"),
                 Column(
                   children: [
                     BlogArticle(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/libary.dart';
+import 'package:website/widgets/under_title.dart';
 
 import '../../widgets/ListRow.dart';
 import '../../widgets/app_bar.dart';
@@ -23,8 +24,9 @@ class _LaptopBlogPageState extends State<LaptopBlogPage> {
             child: ListView(
               children: [
                 ListRow(
+                  
                   children: [
-                    SizedBox(height: 40),
+                    underTitle(title: "Blog"),  
                     BlogArticle(
                       image: blogArticles[0][0],
                       text: blogArticles[0][1],
