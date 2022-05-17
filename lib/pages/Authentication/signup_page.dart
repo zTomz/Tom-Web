@@ -39,7 +39,7 @@ class _SignUpPageState extends State<SignUpPage> {
       endDrawer: SideBar(),
       body: Column(
         children: [
-          widget,
+          MyAppBar(),
           underTitle(title: "Authentication"),
           const SizedBox(height: 30),
           Expanded(

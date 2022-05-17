@@ -32,21 +32,9 @@ class _SettingsPageState extends State<SettingsPage> {
                         text: "Authentication",
                         function: () => Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const SignUpPage(),
+                            builder: (context) => SignUpPage(),
                           ),
                         ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          // ignore: deprecated_member_use
-                          Scaffold.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text("This is an example"),
-                              behavior: SnackBarBehavior.floating,
-                            ),
-                          );
-                        },
-                        child: const Text("Show message"),
                       ),
                     ],
                   )

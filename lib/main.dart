@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:website/pages/home_page.dart';
 import 'package:website/pages/settings_page.dart';
 import 'package:website/programs/authentication.dart';
 
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
                 letterSpacing: 3),
           ),
         ),
-        home: const SettingsPage(),
+        home: const HomePage(),
       ),
     );
   }
