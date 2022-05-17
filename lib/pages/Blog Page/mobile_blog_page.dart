@@ -3,11 +3,10 @@ import 'package:website/libary.dart';
 import 'package:website/widgets/blog_article.dart';
 import 'package:website/widgets/under_title.dart';
 
-import '../../widgets/ListRow.dart';
 import '../../widgets/app_bar.dart';
 
 class MobileBlogPage extends StatefulWidget {
-  MobileBlogPage({Key? key}) : super(key: key);
+  const MobileBlogPage({Key? key}) : super(key: key);
 
   @override
   State<MobileBlogPage> createState() => _MobileBlogPageState();

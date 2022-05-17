@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/libary.dart';
+import 'package:website/pages/Authentication/signup_page.dart';
+import 'package:website/widgets/textButton.dart';
 
 import '../widgets/app_bar.dart';
 import '../widgets/side_bar.dart';
@@ -20,13 +21,38 @@ class _SettingsPageState extends State<SettingsPage> {
       body: Column(
         children: [
           MyAppBar(),
-
-          // ? Change App Bar side button
-          IconButton(
-            onPressed: () => setState(() {
-              appBarSide = !appBarSide;
-            }),
-            icon: const Icon(Icons.change_circle),
+          Expanded(
+            child: Scrollbar(
+              child: ListView(
+                children: [
+                  const SizedBox(height: 20),
+                  Column(
+                    children: [
+                      MyTextButton(
+                        text: "Authentication",
+                        function: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const SignUpPage(),
+                          ),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          // ignore: deprecated_member_use
+                          Scaffold.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("This is an example"),
+                              behavior: SnackBarBehavior.floating,
+                            ),
+                          );
+                        },
+                        child: const Text("Show message"),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ),
         ],
       ),

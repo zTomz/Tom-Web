@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/widgets/app_bar.dart';
 import 'package:website/widgets/texts.dart';
-import 'package:website/widgets/under_title.dart';
 
 
 class DesktopHomePage extends StatefulWidget {
@@ -17,10 +16,8 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
     return Column(
       children: [
         MyAppBar(),
-        const Spacer(),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.1),
         HelloText(),
-        const Spacer(),
-        const Spacer(),
       ],
     );
   }

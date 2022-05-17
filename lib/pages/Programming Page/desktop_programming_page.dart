@@ -8,7 +8,7 @@ import '../../widgets/app_bar.dart';
 import '../../widgets/skill_card.dart';
 
 class DesktopProgrammingPage extends StatefulWidget {
-  DesktopProgrammingPage({Key? key}) : super(key: key);
+  const DesktopProgrammingPage({Key? key}) : super(key: key);
 
   @override
   State<DesktopProgrammingPage> createState() => _DesktopProgrammingPageState();

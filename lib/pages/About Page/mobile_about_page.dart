@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../libary.dart';
-import '../../widgets/about_side_bar.dart';
 import '../../widgets/about_side_bar_widget.dart';
 import '../../widgets/app_bar.dart';
 import '../../widgets/social_media_bar.dart';
 
 class MobileAboutPage extends StatefulWidget {
-  MobileAboutPage({Key? key}) : super(key: key);
+  const MobileAboutPage({Key? key}) : super(key: key);
 
   @override
   State<MobileAboutPage> createState() => _MobileAboutPageState();
@@ -18,12 +17,12 @@ class _MobileAboutPageState extends State<MobileAboutPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        MyAppBar(),
+        const MyAppBar(),
         Expanded(
           child: Scrollbar(
             child: ListView(
               children: [
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,29 +35,29 @@ class _MobileAboutPageState extends State<MobileAboutPage> {
                         ),
                         child: Text(
                           aboutText,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w200),
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
                       width: 300,
-                      padding: EdgeInsets.symmetric(horizontal: 25),
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
                       decoration: BoxDecoration(
-                        color: Theme.of(context).accentColor.withOpacity(0.75),
-                        borderRadius: BorderRadius.only(
+                        color: Theme.of(context).colorScheme.secondary.withOpacity(0.75),
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(25),
                           bottomRight: Radius.circular(25),
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             spreadRadius: 2,
                             blurRadius: 15,
                           ),
@@ -68,22 +67,22 @@ class _MobileAboutPageState extends State<MobileAboutPage> {
                         padding: const EdgeInsets.all(25.0),
                         child: Column(
                           children: [
-                            AboutSideBarWidget(title: "Name", text: "Tom"),
-                            SizedBox(height: 40),
+                            const AboutSideBarWidget(title: "Name", text: "Tom"),
+                            const SizedBox(height: 40),
                             AboutSideBarWidget(title: "Age", text: age.toString()),
-                            SizedBox(height: 40),
+                            const SizedBox(height: 40),
                             AboutSideBarWidget(title: "Hobbies", text: hobbies),
-                            SizedBox(height: 40),
-                            AboutSideBarWidget(title: "Country", text: "Germany"),
+                            const SizedBox(height: 40),
+                            const AboutSideBarWidget(title: "Country", text: "Germany"),
                           ],
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 SocialMediaBar(space: 20, size: 300),
-                SizedBox(height: 100),
+                const SizedBox(height: 100),
               ],
             ),
           ),

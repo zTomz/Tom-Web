@@ -7,7 +7,7 @@ import 'package:website/widgets/social_media_bar.dart';
 import 'package:website/widgets/under_title.dart';
 
 class DesktopAboutPage extends StatefulWidget {
-  DesktopAboutPage({Key? key}) : super(key: key);
+  const DesktopAboutPage({Key? key}) : super(key: key);
 
   @override
   State<DesktopAboutPage> createState() => _DesktopAboutPageState();
@@ -19,11 +19,13 @@ class _DesktopAboutPageState extends State<DesktopAboutPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        MyAppBar(),
+        const MyAppBar(),
+        
         Expanded(
           child: Scrollbar(
             child: ListView(
               children: [
+                const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,17 +35,17 @@ class _DesktopAboutPageState extends State<DesktopAboutPage> {
                         padding: const EdgeInsets.all(30.0),
                         child: Text(
                           aboutText,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w200),
                         ),
                       ),
                     ),
-                    AboutSideBar()
+                    const AboutSideBar()
                   ],
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 SocialMediaBar(space: 40, size: 250),
-                SizedBox(height: 100),
+                const SizedBox(height: 100),
               ],
             ),
           ),

@@ -18,9 +18,8 @@ class _SideBarState extends State<SideBar> {
   
   @override
   Widget build(BuildContext context) {
-    final padding = MediaQuery.of(context).size.width * 0.02;
     return Padding(
-      padding: EdgeInsets.only(top: padding, left: padding, bottom: padding),
+      padding: const EdgeInsets.all(20),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(25),
         child: Drawer(

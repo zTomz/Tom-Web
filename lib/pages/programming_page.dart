@@ -20,7 +20,7 @@ class _ProgrammingPageState extends State<ProgrammingPage> {
       drawer: SideBar(),
       endDrawer: SideBar(),
       extendBodyBehindAppBar: true,
-      body: ResponsiveLayout(
+      body: const ResponsiveLayout(
         mobilBody: MobileProgrammingPage(),
         laptopBody: LaptopProgrammingPage(),
         desktopBody: DesktopProgrammingPage(),

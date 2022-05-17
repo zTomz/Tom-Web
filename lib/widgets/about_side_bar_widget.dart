@@ -3,36 +3,37 @@ import 'package:flutter/material.dart';
 class AboutSideBarWidget extends StatelessWidget {
   final String title;
   final String text;
-  AboutSideBarWidget({required this.title, required this.text});
+  // ignore: use_key_in_widget_constructors
+  const AboutSideBarWidget({required this.title, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 1000,
       decoration: BoxDecoration(
-          color: Theme.of(context).accentColor.withBlue(230),
+          color: Theme.of(context).colorScheme.secondary.withBlue(230),
           borderRadius: BorderRadius.circular(25)),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(25),
         child: Column(
           children: [
-            SizedBox(height: 10),
-            Text(this.title),
+            const SizedBox(height: 10),
+            Text(title),
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
               child: Container(
                 height: 5,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   borderRadius: BorderRadius.circular(2.5),
                 ),
               ),
             ),
             Container(
-              padding: EdgeInsets.all(15),
-              child: Text(this.text),
+              padding: const EdgeInsets.all(15),
+              child: Text(text),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
           ],
         ),
       ),

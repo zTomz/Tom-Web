@@ -42,8 +42,8 @@ class underTitle extends StatelessWidget {
             ],
           ),
         ),
-        spacer != null ? SizedBox(height: space != null ? (space! / 2) : 15) : SizedBox.shrink(),
-        spacer != null ? Container(
+        spacer == null ? SizedBox(height: space != null ? (space! / 2) : 15) : SizedBox.shrink(),
+        spacer == null ? Container(
           width: MediaQuery.of(context).size.width -
               (MediaQuery.of(context).size.width * 0.2),
           height: 10,

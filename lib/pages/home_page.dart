@@ -7,7 +7,7 @@ import 'package:website/responsive/responsive_layout.dart';
 import '../widgets/side_bar.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
       extendBodyBehindAppBar: true,
       drawer: SideBar(),
       endDrawer: SideBar(),
-      body: ResponsiveLayout(
+      body: const ResponsiveLayout(
         mobilBody: MobilHomePage(),
         laptopBody: LaptopHomePage(),
         desktopBody: DesktopHomePage(),

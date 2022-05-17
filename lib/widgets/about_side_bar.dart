@@ -12,14 +12,14 @@ class AboutSideBar extends StatelessWidget {
     return Container(
       width: 250,
       decoration: BoxDecoration(
-        color: Theme.of(context).accentColor.withOpacity(0.75),
-        borderRadius: BorderRadius.only(
+        color: Theme.of(context).colorScheme.secondary.withOpacity(0.75),
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(25),
           bottomLeft: Radius.circular(25),
         ),
         boxShadow: [
           BoxShadow(
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             spreadRadius: 2,
             blurRadius: 15,
           ),
@@ -29,7 +29,7 @@ class AboutSideBar extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         child: Column(
           children: [
-            AboutSideBarWidget(title: "Name", text: "Tom"),
+            const AboutSideBarWidget(title: "Name", text: "Tom"),
             SizedBox(height: space),
             AboutSideBarWidget(title: "Age", text: age.toString()),
             SizedBox(height: space),
@@ -38,7 +38,7 @@ class AboutSideBar extends StatelessWidget {
                 text:
                     hobbies),
             SizedBox(height: space),
-            AboutSideBarWidget(title: "Country", text: "Germany"),
+            const AboutSideBarWidget(title: "Country", text: "Germany"),
           ],
         ),
       ),

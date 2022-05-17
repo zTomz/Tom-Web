@@ -8,7 +8,7 @@ import '../../widgets/app_bar.dart';
 import '../../widgets/project_card.dart';
 
 class LaptopProgrammingPage extends StatefulWidget {
-  LaptopProgrammingPage({Key? key}) : super(key: key);
+  const LaptopProgrammingPage({Key? key}) : super(key: key);
 
   @override
   State<LaptopProgrammingPage> createState() => _LaptopProgrammingPageState();

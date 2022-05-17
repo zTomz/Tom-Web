@@ -7,7 +7,7 @@ import '../../widgets/app_bar.dart';
 import '../../widgets/blog_article.dart';
 
 class LaptopBlogPage extends StatefulWidget {
-  LaptopBlogPage({Key? key}) : super(key: key);
+  const LaptopBlogPage({Key? key}) : super(key: key);
 
   @override
   State<LaptopBlogPage> createState() => _LaptopBlogPageState();

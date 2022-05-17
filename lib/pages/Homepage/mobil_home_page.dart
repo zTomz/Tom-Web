@@ -5,7 +5,7 @@ import 'package:website/widgets/texts.dart';
 import '../../widgets/circle.dart';
 
 class MobilHomePage extends StatefulWidget {
-  MobilHomePage({Key? key}) : super(key: key);
+  const MobilHomePage({Key? key}) : super(key: key);
 
   @override
   State<MobilHomePage> createState() => _MobilHomePageState();
@@ -40,7 +40,7 @@ class _MobilHomePageState extends State<MobilHomePage> {
           ],
         ),
         HelloText(),
-        Spacer(),
+        const Spacer(),
         Stack(
           children: [
             circle(
@@ -49,7 +49,7 @@ class _MobilHomePageState extends State<MobilHomePage> {
             )
           ],
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

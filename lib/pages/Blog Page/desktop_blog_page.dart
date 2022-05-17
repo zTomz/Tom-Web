@@ -6,7 +6,7 @@ import 'package:website/widgets/blog_article.dart';
 import 'package:website/widgets/under_title.dart';
 
 class DesktopBlogPage extends StatefulWidget {
-  DesktopBlogPage({Key? key}) : super(key: key);
+  const DesktopBlogPage({Key? key}) : super(key: key);
 
   @override
   State<DesktopBlogPage> createState() => _DesktopBlogPageState();

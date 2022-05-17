@@ -4,7 +4,7 @@ import 'package:website/widgets/logo.dart';
 import 'package:website/libary.dart';
 
 class MyAppBar extends StatefulWidget {
-  MyAppBar({Key? key}) : super(key: key);
+  const MyAppBar({Key? key}) : super(key: key);
 
   @override
   State<MyAppBar> createState() => _MyAppBarState();
