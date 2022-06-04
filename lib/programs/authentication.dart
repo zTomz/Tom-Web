@@ -2,26 +2,31 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:website/libary.dart';
 
 Future signIn(String EMAIL, String PASSWORD) async {
   try {
     await FirebaseAuth.instance
         .signInWithEmailAndPassword(email: EMAIL, password: PASSWORD);
-
+    isSignedIn = true;
     print("Logged in");
   } on FirebaseAuthException catch (e) {
     print(e);
   }
 }
 
-Future signUp(String EMAIL, String PASSWORD) async {
+signUp(String EMAIL, String PASSWORD) {
   try {
-    await FirebaseAuth.instance
+    FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: EMAIL, password: PASSWORD);
+    isSignedIn = true;
     print("Created account");
-  } on FirebaseAuthException catch (e) {
-    print(e);
+    return true;
+  } on FirebaseAuthException catch (error) {
+    print(error);
+    return error;
   }
 }
 

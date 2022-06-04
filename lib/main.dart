@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create:(context) => GoogleSignInProvider(),
+      create: (context) => GoogleSignInProvider(),
       child: MaterialApp(
-        title: 'Homepage',
+        title: 'Tom',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: const Color(0xff007FFF),
@@ -35,13 +35,14 @@ class MyApp extends StatelessWidget {
           fontFamily: "Roboto",
           textTheme: const TextTheme(
             headline1: TextStyle(
-                fontSize: 30,
-                color: Color.fromARGB(197, 0, 0, 0),
-                fontWeight: FontWeight.w900,
-                letterSpacing: 3),
+              fontSize: 30,
+              color: Color.fromARGB(197, 0, 0, 0),
+              fontWeight: FontWeight.w900,
+              letterSpacing: 3,
+            ),
           ),
         ),
-        home: const HomePage(),
+        home: const SettingsPage(),
       ),
     );
   }

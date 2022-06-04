@@ -32,3 +32,4 @@ String hobbies =
 String username = "";
 String userEmail = "";
 
+bool isSignedIn = false;

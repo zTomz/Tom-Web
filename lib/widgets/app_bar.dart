@@ -44,23 +44,26 @@ class _MyAppBarState extends State<MyAppBar> {
 
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            MediaQuery.of(context).size.width > 200
-                ? const Logo(size: 75, logoColor: Color.fromARGB(197, 0, 0, 0))
-                : const SizedBox.shrink(),
-            Builder(
-              builder: (context) => IconButton(
-                icon: SvgPicture.asset("assets/ico/menu.svg"),
-                onPressed: () {
-                  appBarSide == false
-                      ? Scaffold.of(context).openDrawer()
-                      : Scaffold.of(context).openEndDrawer();
-                },
-              ),
-            ),
-          ],
+        child: Builder(
+          builder: (context) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MediaQuery.of(context).size.width > 200
+                    ? const Logo(
+                        size: 75, logoColor: Color.fromARGB(197, 0, 0, 0))
+                    : const SizedBox.shrink(),
+                IconButton(
+                  icon: SvgPicture.asset("assets/ico/menu.svg"),
+                  onPressed: () {
+                    appBarSide == false
+                        ? Scaffold.of(context).openDrawer()
+                        : Scaffold.of(context).openEndDrawer();
+                  },
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
